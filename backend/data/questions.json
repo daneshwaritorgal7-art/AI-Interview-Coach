@@ -1,0 +1,42 @@
+[
+  {
+    "id": "b1",
+    "text": "Tell me about yourself.",
+    "type": "behavioral"
+  },
+  {
+    "id": "b2",
+    "text": "Tell me about a challenging project you worked on.",
+    "type": "behavioral"
+  },
+  {
+    "id": "b3",
+    "text": "Tell me about a time you solved a difficult problem.",
+    "type": "behavioral"
+  },
+  {
+    "id": "b4",
+    "text": "Tell me about a time you worked in a team.",
+    "type": "behavioral"
+  },
+  {
+    "id": "t1",
+    "text": "What is object-oriented programming?",
+    "type": "technical"
+  },
+  {
+    "id": "t2",
+    "text": "What is the difference between SQL and NoSQL databases?",
+    "type": "technical"
+  },
+  {
+    "id": "t3",
+    "text": "What is an API?",
+    "type": "technical"
+  },
+  {
+    "id": "t4",
+    "text": "Explain the difference between frontend and backend development.",
+    "type": "technical"
+  }
+]
