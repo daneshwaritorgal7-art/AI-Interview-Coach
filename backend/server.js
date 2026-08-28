@@ -1,10 +1,12 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
+import apiRoutes from "./routes/api.js";
 
 const app = express();
 const PORT = 4000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -12,6 +14,9 @@ app.use(express.json());
 const questions = JSON.parse(
   fs.readFileSync("./data/questions.json", "utf-8")
 );
+
+// Connect API routes
+app.use("/api", apiRoutes);
 
 // Home route
 app.get("/", (req, res) => {
@@ -28,27 +33,27 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// Get a random interview question
+// Get random interview question
 app.get("/api/question", (req, res) => {
   const type = req.query.type;
 
   let filteredQuestions = questions;
 
-  // Filter by question type if provided
+  // Filter questions by type
   if (type) {
     filteredQuestions = questions.filter(
       (question) => question.type === type
     );
   }
 
-  // Check if questions exist
+  // If no questions found
   if (filteredQuestions.length === 0) {
     return res.status(404).json({
       error: "No questions found for this type"
     });
   }
 
-  // Select random question
+  // Select a random question
   const randomIndex = Math.floor(
     Math.random() * filteredQuestions.length
   );
