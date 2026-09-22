@@ -38,7 +38,7 @@ function Practice() {
 
     try {
       const url =
-        `http://localhost:4000/api/question` +
+        `${import.meta.env.VITE_API_URL}/api/question` +
         `?role=${encodeURIComponent(role)}` +
         `&difficulty=${encodeURIComponent(difficulty)}`;
 
@@ -257,7 +257,7 @@ function Practice() {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/api/answer",
+        `${import.meta.env.VITE_API_URL}/api/answer`,
         {
           method: "POST",
 

@@ -9,7 +9,7 @@ function Dashboard() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/sessions")
+    fetch(`${import.meta.env.VITE_API_URL}/api/sessions`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch sessions");
