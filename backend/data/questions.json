@@ -1,42 +1,150 @@
-[
-  {
-    "id": "b1",
-    "text": "Tell me about yourself.",
-    "type": "behavioral"
+
+{
+  "Python Developer": {
+    "easy": [
+      "What is Python and why is it popular?",
+      "What are lists and tuples in Python?",
+      "What is a Python dictionary?",
+      "What is the difference between == and is in Python?"
+    ],
+    "medium": [
+      "Explain object-oriented programming in Python.",
+      "What are decorators in Python?",
+      "How does exception handling work in Python?",
+      "Explain the difference between shallow copy and deep copy."
+    ],
+    "hard": [
+      "How does Python memory management work?",
+      "Explain Python generators and when you would use them.",
+      "How would you optimize a slow Python application?",
+      "Explain the Global Interpreter Lock and its impact on multithreading."
+    ]
   },
-  {
-    "id": "b2",
-    "text": "Tell me about a challenging project you worked on.",
-    "type": "behavioral"
+
+  "Data Scientist": {
+    "easy": [
+      "What is machine learning?",
+      "What is the difference between supervised and unsupervised learning?",
+      "What is a feature in machine learning?",
+      "Why do we split data into training and testing sets?"
+    ],
+    "medium": [
+      "How do you handle missing values in a dataset?",
+      "Explain overfitting and underfitting.",
+      "What is cross-validation?",
+      "How would you evaluate a classification model?"
+    ],
+    "hard": [
+      "How would you handle severe class imbalance?",
+      "Explain the bias-variance tradeoff.",
+      "How would you design an end-to-end machine-learning pipeline?",
+      "How would you detect data leakage during model training?"
+    ]
   },
-  {
-    "id": "b3",
-    "text": "Tell me about a time you solved a difficult problem.",
-    "type": "behavioral"
+
+  "Data Analyst": {
+    "easy": [
+      "What is data analysis?",
+      "What is the difference between SQL and NoSQL?",
+      "What is a primary key?",
+      "What is a pivot table?"
+    ],
+    "medium": [
+      "Explain INNER JOIN and LEFT JOIN.",
+      "How would you handle missing data?",
+      "What is normalization?",
+      "How would you identify an outlier?"
+    ],
+    "hard": [
+      "How would you investigate a sudden drop in business revenue?",
+      "How would you design a dashboard for senior management?",
+      "How would you optimize a slow SQL query?",
+      "How would you measure the success of a business experiment?"
+    ]
   },
-  {
-    "id": "b4",
-    "text": "Tell me about a time you worked in a team.",
-    "type": "behavioral"
+
+  "Frontend Developer": {
+    "easy": [
+      "What is HTML?",
+      "What is CSS?",
+      "What is JavaScript?",
+      "What is the DOM?"
+    ],
+    "medium": [
+      "What is the difference between state and props in React?",
+      "Explain React hooks.",
+      "What is responsive web design?",
+      "How does event handling work in JavaScript?"
+    ],
+    "hard": [
+      "How would you optimize a slow React application?",
+      "Explain React rendering and reconciliation.",
+      "How would you design a scalable frontend architecture?",
+      "How would you improve web application accessibility?"
+    ]
   },
-  {
-    "id": "t1",
-    "text": "What is object-oriented programming?",
-    "type": "technical"
+
+  "Backend Developer": {
+    "easy": [
+      "What is a REST API?",
+      "What is HTTP?",
+      "What is JSON?",
+      "What is a database?"
+    ],
+    "medium": [
+      "Explain authentication and authorization.",
+      "What is middleware in Express.js?",
+      "What is database indexing?",
+      "How does caching improve backend performance?"
+    ],
+    "hard": [
+      "How would you design a scalable REST API?",
+      "How would you handle millions of API requests?",
+      "How would you design a distributed backend system?",
+      "How would you secure a production API?"
+    ]
   },
-  {
-    "id": "t2",
-    "text": "What is the difference between SQL and NoSQL databases?",
-    "type": "technical"
+
+  "Machine Learning Engineer": {
+    "easy": [
+      "What is machine learning?",
+      "What is supervised learning?",
+      "What is a training dataset?",
+      "What is model prediction?"
+    ],
+    "medium": [
+      "Explain feature engineering.",
+      "What is hyperparameter tuning?",
+      "Explain precision, recall and F1-score.",
+      "What is model overfitting?"
+    ],
+    "hard": [
+      "How would you deploy a machine-learning model in production?",
+      "How would you monitor model drift?",
+      "How would you design an ML pipeline for millions of records?",
+      "How would you reduce inference latency?"
+    ]
   },
-  {
-    "id": "t3",
-    "text": "What is an API?",
-    "type": "technical"
-  },
-  {
-    "id": "t4",
-    "text": "Explain the difference between frontend and backend development.",
-    "type": "technical"
+
+  "Cybersecurity Engineer": {
+    "easy": [
+      "What is cybersecurity?",
+      "What is phishing?",
+      "What is malware?",
+      "What is a firewall?"
+    ],
+    "medium": [
+      "Explain authentication and authorization.",
+      "What is SQL injection?",
+      "What is encryption?",
+      "How would you detect suspicious network activity?"
+    ],
+    "hard": [
+      "How would you design a secure authentication system?",
+      "How would you respond to a ransomware incident?",
+      "How would you detect data exfiltration?",
+      "How would you design a zero-trust security architecture?"
+    ]
   }
-]
+}
+

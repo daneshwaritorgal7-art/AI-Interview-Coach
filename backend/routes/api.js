@@ -1,7 +1,9 @@
+
 import express from "express";
 import { analyzeTranscript } from "../lib/analysis.js";
 import { generateFeedback } from "../lib/feedback.js";
 import { saveSession, getSessions } from "../db.js";
+import { generateQuestion } from "../lib/questionGenerator.js";
 
 const router = express.Router();
 
@@ -110,7 +112,6 @@ router.post("/answer", async (req, res) => {
   } catch (error) {
 
     console.error("Answer processing error:");
-
     console.error(error);
 
 
@@ -139,6 +140,7 @@ router.get("/sessions", async (req, res) => {
 
     const sessions = await getSessions();
 
+
     res.json({
 
       success: true,
@@ -147,17 +149,95 @@ router.get("/sessions", async (req, res) => {
 
     });
 
+
   } catch (error) {
 
     console.error("Session retrieval error:");
-
     console.error(error);
+
 
     res.status(500).json({
 
       success: false,
 
       error: "Failed to retrieve sessions"
+
+    });
+
+  }
+
+});
+
+
+// ==========================================
+// GET /api/question
+// Generate role-based interview question
+// ==========================================
+
+router.get("/question", (req, res) => {
+
+  try {
+
+    const {
+      role,
+      difficulty = "medium"
+    } = req.query;
+
+
+    // ==========================================
+    // Validate job role
+    // ==========================================
+
+    if (!role) {
+
+      return res.status(400).json({
+
+        success: false,
+
+        error: "Job role is required"
+
+      });
+
+    }
+
+
+    // ==========================================
+    // Generate question
+    // ==========================================
+
+    const question = generateQuestion({
+
+      jobRole: role,
+
+      difficulty: difficulty
+
+    });
+
+
+    // ==========================================
+    // Return question
+    // ==========================================
+
+    res.json({
+
+      success: true,
+
+      question: question
+
+    });
+
+
+  } catch (error) {
+
+    console.error("Question generation error:");
+    console.error(error);
+
+
+    res.status(400).json({
+
+      success: false,
+
+      error: error.message
 
     });
 
@@ -188,3 +268,4 @@ router.get("/health", (req, res) => {
 // ==========================================
 
 export default router;
+
