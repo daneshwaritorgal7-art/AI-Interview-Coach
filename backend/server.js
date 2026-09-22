@@ -4,7 +4,7 @@ import fs from "fs";
 import apiRoutes from "./routes/api.js";
 
 const app = express();
-const PORT = 4000;
+
 
 // Middleware
 app.use(cors());
@@ -64,6 +64,9 @@ app.get("/api/question", (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+// Start server
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
